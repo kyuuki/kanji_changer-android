@@ -7,7 +7,7 @@ import android.widget.EditText
 import android.widget.TextView
 import jp.kyuuki.kanjichanger.R
 
-import jp.kyuuki.kanjichanger.components.numberToKanji
+import jp.kyuuki.kanjichanger.models.KanjiChangeableNumber
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,7 +20,9 @@ class MainActivity : AppCompatActivity() {
         val buttonChange = findViewById<Button>(R.id.button_change)
 
         buttonChange.setOnClickListener {
-            textResultKanji.text = numberToKanji(Integer.parseInt(editTextNumber.text.toString()))
+            // TODO: 数字以外が入力された場合の対応
+            val number = KanjiChangeableNumber(editTextNumber.text.toString().toLong())
+            textResultKanji.text = number.getKanji()
         }
     }
 }
