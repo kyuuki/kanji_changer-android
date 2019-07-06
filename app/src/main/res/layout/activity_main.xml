@@ -7,45 +7,62 @@
         android:layout_height="match_parent"
         tools:context=".activities.MainActivity">
     <TextView
-            android:text="数字"
+            android:text="数字："
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/text_number" app:layout_constraintEnd_toStartOf="@+id/edit_text_number"
-            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
-            app:layout_constraintTop_toTopOf="@+id/edit_text_number" android:layout_marginTop="16dp"/>
+            android:layout_marginEnd="16dp" android:layout_marginRight="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintBaseline_toBaselineOf="@+id/edit_text_number"/>
     <TextView
-            android:text="漢字"
+            android:text="漢字："
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/text_kanji" app:layout_constraintEnd_toStartOf="@+id/edit_text_number"
-            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
-            app:layout_constraintTop_toTopOf="@+id/text_result_kanji"/>
+            android:layout_marginEnd="16dp" android:layout_marginRight="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintBaseline_toBaselineOf="@+id/text_result_kanji"/>
     <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:id="@+id/text_result_kanji" app:layout_constraintEnd_toEndOf="@+id/edit_text_number"
-            app:layout_constraintStart_toStartOf="@+id/edit_text_number" android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp" app:layout_constraintTop_toBottomOf="@+id/edit_text_number"
-            android:layout_marginTop="36dp" app:layout_constraintHorizontal_bias="0.0" android:text="ここに変換結果が表示されます"
-            android:textSize="14sp"/>
+            android:id="@+id/text_result_kanji"
+            app:layout_constraintTop_toBottomOf="@+id/edit_text_number"
+            android:layout_marginTop="40dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintEnd_toEndOf="@+id/edit_text_number"
+            app:layout_constraintStart_toStartOf="@+id/edit_text_number" android:hint="ここに変換結果が表示されます。"/>
     <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="222dp"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal"
             android:ems="10"
             android:id="@+id/edit_text_number"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.587"
-            android:layout_marginTop="124dp"
-            app:layout_constraintTop_toTopOf="parent"/>
+            android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.606"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.19999999"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
     <Button
             android:text="変換"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/button_change" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp" app:layout_constraintTop_toBottomOf="@+id/text_result_kanji"
-            android:layout_marginTop="60dp" app:layout_constraintHorizontal_bias="0.498"/>
+            android:id="@+id/button_change"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/button"
+            app:layout_constraintHorizontal_chainStyle="packed" android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp" android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    <Button
+            android:text="クリア"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintStart_toEndOf="@+id/button_change" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toTopOf="@+id/button_change"/>
 </android.support.constraint.ConstraintLayout>
