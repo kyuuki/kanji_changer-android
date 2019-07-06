@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">汉字换</string>
+
+    <string name="label_number">数：</string>
+    <string name="label_kanji">汉字：</string>
+    <string name="button_name_convert">兑换</string>
+    <string name="button_name_clear">明确</string>
+    <string name="hint_result_kanji">转换结果显示在此处.</string>
+</resources>

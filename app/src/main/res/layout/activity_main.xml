@@ -7,7 +7,7 @@
         android:layout_height="match_parent"
         tools:context=".activities.MainActivity">
     <TextView
-            android:text="数字："
+            android:text="@string/label_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/text_number" app:layout_constraintEnd_toStartOf="@+id/edit_text_number"
@@ -15,7 +15,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             app:layout_constraintBaseline_toBaselineOf="@+id/edit_text_number"/>
     <TextView
-            android:text="漢字："
+            android:text="@string/label_kanji"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/text_kanji" app:layout_constraintEnd_toStartOf="@+id/edit_text_number"
@@ -30,7 +30,7 @@
             android:layout_marginTop="40dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             app:layout_constraintEnd_toEndOf="@+id/edit_text_number"
-            app:layout_constraintStart_toStartOf="@+id/edit_text_number" android:hint="ここに変換結果が表示されます。"/>
+            app:layout_constraintStart_toStartOf="@+id/edit_text_number" android:hint="@string/hint_result_kanji"/>
     <EditText
             android:layout_width="222dp"
             android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.19999999"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
     <Button
-            android:text="変換"
+            android:text="@string/button_name_convert"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button_change"
@@ -56,7 +56,7 @@
             android:layout_marginEnd="16dp" android:layout_marginBottom="24dp"
             app:layout_constraintBottom_toBottomOf="parent"/>
     <Button
-            android:text="クリア"
+            android:text="@string/button_name_clear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/button"

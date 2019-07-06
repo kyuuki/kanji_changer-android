@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">คันจิเปลี่ยน</string>
+
+    <string name="label_number">จำนวน: </string>
+    <string name="label_kanji">ตัวอักษรจีน: </string>
+    <string name="button_name_convert">แปลง</string>
+    <string name="button_name_clear">ชัดเจน</string>
+    <string name="hint_result_kanji">ผลลัพธ์การแปลงจะแสดงที่นี่.</string>
+</resources>
