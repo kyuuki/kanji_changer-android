@@ -1,14 +1,16 @@
 package jp.kyuuki.kanjichanger.components
 
+import java.math.BigInteger
+
 /**
  * 数字を漢字に変換.
  *
  * - 56781234 → 五千六百七十八万千弐百参拾四
- * TODO: 垓以上に対応したい
+ * - TODO: 無量大数を超えたときにエラーにする
  */
-fun numberToKanji(number: Long): String {
+fun numberToKanji(number: BigInteger): String {
     // 0 の時だけ特別
-    if (number == 0L) {
+    if (number == BigInteger.ZERO) {
         return number1DigitToKanji(0)
     }
 
@@ -23,13 +25,15 @@ fun numberToKanji(number: Long): String {
     var y = number  // 取り出した残り (1234567890 → 123456)
 
     tanis.forEach {
-        if (y == 0L) {
+        if (y == BigInteger.ZERO) {
             // https://improve-future.com/kotlin-why-while-break-or-continue-cant-be-used-in-foreacn-repeat-which-can-be-used-in-while-and-for.html
             return@forEach
         }
 
-        x = (y % 10000).toInt()
-        y = y / 10000
+        //x = (y % 10000).toInt()
+        //y = y / 10000
+        x = y.remainder(BigInteger("10000")).toInt()
+        y = y.divide(BigInteger("10000"))
 
         if (x != 0) {
             val kanji = number4DigitToKanji(x)
