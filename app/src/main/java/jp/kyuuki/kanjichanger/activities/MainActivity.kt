@@ -8,6 +8,7 @@ import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import jp.kyuuki.kanjichanger.R
 import jp.kyuuki.kanjichanger.models.KanjiChangeableNumber
 
@@ -23,9 +24,13 @@ class MainActivity : AppCompatActivity() {
         val buttonClear = findViewById<Button>(R.id.button_clear)
 
         buttonConvert.setOnClickListener {
-            // TODO: 数字以外が入力された場合の対応
-            val number = KanjiChangeableNumber(editTextNumber.text.toString().toLong())
-            textResultKanji.text = number.getKanji()
+            try {
+                val number = editTextNumber.text.toString().toLong()
+                val kanjiChangeableNumber = KanjiChangeableNumber(number)
+                textResultKanji.text = kanjiChangeableNumber.getKanji()
+            } catch (e:  NumberFormatException) {
+                Toast.makeText(applicationContext, getString(R.string.message_invalid_input_number), Toast.LENGTH_LONG).show()
+            }
         }
 
         buttonClear.setOnClickListener {
@@ -44,7 +49,6 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.menu_about -> {
-                //Toast.makeText(applicationContext, "TODO", Toast.LENGTH_LONG).show()
                 val intent = Intent(this, AboutActivity::class.java)
                 startActivity(intent)
                 true

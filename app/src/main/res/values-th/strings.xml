@@ -6,5 +6,8 @@
     <string name="label_kanji">ตัวอักษรจีน: </string>
     <string name="button_name_convert">แปลง</string>
     <string name="button_name_clear">ชัดเจน</string>
-    <string name="hint_result_kanji">ผลลัพธ์การแปลงจะแสดงที่นี่.</string>
+    <string name="hint_result_kanji">ผลลัพธ์การแปลงจะแสดงที่นี่</string>
+    <string name="message_invalid_input_number">Input number is Invalid</string>
+
+    <string name="menu_about">About</string>
 </resources>

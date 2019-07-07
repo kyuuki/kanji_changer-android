@@ -6,7 +6,8 @@
     <string name="label_kanji">漢字：</string>
     <string name="button_name_convert">変換</string>
     <string name="button_name_clear">クリア</string>
-    <string name="hint_result_kanji">ここに変換結果が表示されます。</string>
+    <string name="hint_result_kanji">ここに変換結果が表示されます</string>
+    <string name="message_invalid_input_number">入力された数字が正しくありません</string>
 
     <string name="menu_about">このアプリについて</string>
 </resources>

@@ -13,6 +13,6 @@ class AboutActivity : AppCompatActivity() {
         setContentView(R.layout.activity_about)
 
         val textVersion = findViewById<TextView>(R.id.text_version)
-        textVersion.setText("Ver." + BuildConfig.VERSION_NAME)
+        textVersion.text = "Ver." + BuildConfig.VERSION_NAME
     }
 }
