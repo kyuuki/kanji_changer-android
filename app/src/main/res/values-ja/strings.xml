@@ -7,4 +7,6 @@
     <string name="button_name_convert">変換</string>
     <string name="button_name_clear">クリア</string>
     <string name="hint_result_kanji">ここに変換結果が表示されます。</string>
+
+    <string name="menu_about">このアプリについて</string>
 </resources>

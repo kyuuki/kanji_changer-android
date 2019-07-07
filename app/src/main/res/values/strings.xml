@@ -1,9 +1,11 @@
 <resources>
     <string name="app_name">Kanji Changer</string>
 
-    <string name="label_number">Number: </string>
-    <string name="label_kanji">Kanji: </string>
+    <string name="label_number">Number:</string>
+    <string name="label_kanji">Kanji:</string>
     <string name="button_name_convert">Convert</string>
     <string name="button_name_clear">Clear</string>
     <string name="hint_result_kanji">Here will be converted result.</string>
+
+    <string name="menu_about">About</string>
 </resources>
