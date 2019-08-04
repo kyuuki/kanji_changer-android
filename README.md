@@ -1,7 +1,7 @@
 Kanji Changer
 =============
 
-Convert a number to a Japanese Kanji (Daiji) easily.
+Convert a number to a Japanese Kanji (Daiji) easily.  
 Support up to "無量大数 (Muryo-taisu)", the maximum Kanji number unit.
 
 [![Build status][shield-build]](#)
